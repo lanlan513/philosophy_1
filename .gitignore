@@ -30,3 +30,6 @@ Thumbs.db
 # Cache
 .cache/
 *.cache
+
+# 思想年代：本地版本库
+.century-data/

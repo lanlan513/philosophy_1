@@ -1,8 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Link, NavLink, Route, Routes, useLocation, useParams } from 'react-router-dom';
-import { ArrowUpRight, ChevronRight, Menu, Search, X } from 'lucide-react';
+import { ArrowUpRight, ChevronRight, Clock3, Menu, Search, X } from 'lucide-react';
 import { getPhilosopher, getTradition, philosophers, questions, traditions } from './data';
+import { CenturyPage } from './century/CenturyPage';
 import './styles.css';
 
 function useReadingLog() {
@@ -25,7 +26,9 @@ function useReadingLog() {
 function Layout({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const bare = location.pathname.startsWith('/century');
   useEffect(() => setMenuOpen(false), [location.pathname]);
+  if (bare) return <div className="app-shell app-shell-bare">{children}</div>;
   return <div className="app-shell">
     <header className="site-header">
       <Link className="wordmark" to="/"><span className="wordmark-mark">Φ</span><span><b>思想档案馆</b><small>WESTERN PHILOSOPHY ARCHIVE</small></span></Link>
@@ -34,6 +37,7 @@ function Layout({ children }) {
         <NavLink to="/traditions">思想传统</NavLink>
         <NavLink to="/philosophers">哲学家</NavLink>
         <NavLink to="/questions">核心问题</NavLink>
+        <NavLink to="/century" className="nav-century"><Clock3 size={13} />我的思想年代</NavLink>
         <span className="nav-rule" />
         <span className="archive-status"><span className="status-dot" />正在开放 · 24 典藏</span>
       </nav>
@@ -79,6 +83,6 @@ function QuestionDetail() { const { id } = useParams(); const question = questio
 
 function NotFound() { return <main className="page-main section-pad"><PageIntro kicker="404" title="这页还在路上。" intro="返回档案馆，换一条路径继续。" /><Link className="text-link" to="/">回到首页 <ArrowUpRight size={16} /></Link></main>; }
 
-function App() { return <Layout><Routes><Route path="/" element={<Home />} /><Route path="/traditions" element={<Traditions />} /><Route path="/philosophers" element={<Philosophers />} /><Route path="/questions" element={<Questions />} /><Route path="/tradition/:id" element={<TraditionDetail />} /><Route path="/philosopher/:id" element={<PhilosopherDetail />} /><Route path="/question/:id" element={<QuestionDetail />} /><Route path="*" element={<NotFound />} /></Routes></Layout>; }
+function App() { return <Layout><Routes><Route path="/" element={<Home />} /><Route path="/traditions" element={<Traditions />} /><Route path="/philosophers" element={<Philosophers />} /><Route path="/questions" element={<Questions />} /><Route path="/tradition/:id" element={<TraditionDetail />} /><Route path="/philosopher/:id" element={<PhilosopherDetail />} /><Route path="/question/:id" element={<QuestionDetail />} /><Route path="/century" element={<CenturyPage />} /><Route path="*" element={<NotFound />} /></Routes></Layout>; }
 
 createRoot(document.getElementById('root')).render(<BrowserRouter><App /></BrowserRouter>);

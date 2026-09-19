@@ -5,8 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:server": "node server/index.mjs",
+    "dev:all": "node server/index.mjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server/index.mjs",
+    "test": "node --test server/*.test.mjs src/century/*.test.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
