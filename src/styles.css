@@ -1,189 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+/* 我的思想年代 · 展墙风格 */
+:root {
+  --ink: #1c1a17;
+  --paper: #f5f1e8;
+  --wall: #efe9dc;
+  --frame: #2b2620;
+  --accent: #8a5a2b;
+  --era: #31435c;
+  --philosopher: #6b3f2a;
+  --question: #3f5a3a;
+  --danger: #9c2f2f;
+  --ok: #2f6b3a;
+}
 
-:root { --ink: #20211f; --paper: #ede8df; --muted: #8c8a83; --line: rgba(237, 232, 223, .18); --accent: #c75b3d; font-family: 'Noto Sans SC', sans-serif; color: var(--paper); background: var(--ink); font-synthesis: none; }
 * { box-sizing: border-box; }
-body { margin: 0; min-width: 320px; background: var(--ink); }
-a { color: inherit; text-decoration: none; }
-button, input { font: inherit; }
-.app-shell { overflow: hidden; }
-.site-header { align-items: center; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; margin: 0 auto; max-width: 1480px; padding: 22px 46px; }
-.wordmark { align-items: center; display: inline-flex; gap: 12px; }
-.wordmark-mark { align-items: center; border: 1px solid var(--paper); border-radius: 50%; display: inline-flex; font-family: 'Instrument Serif', serif; font-size: 25px; height: 34px; justify-content: center; width: 34px; }
-.wordmark b { display: block; font-size: 14px; font-weight: 700; letter-spacing: .08em; }
-.wordmark small { color: var(--muted); display: block; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: .04em; margin-top: 3px; }
-.main-nav { align-items: center; display: flex; gap: 29px; }
-.main-nav a { color: #b7b4ab; font-size: 13px; transition: color .2s; }
-.main-nav a:hover, .main-nav a.active { color: var(--paper); }
-.nav-rule { background: var(--line); height: 19px; width: 1px; }
-.archive-status { color: var(--muted); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .03em; }
-.status-dot { background: #9bad76; border-radius: 50%; display: inline-block; height: 6px; margin-right: 6px; width: 6px; }
-.menu-button { background: none; border: 0; color: var(--paper); cursor: pointer; display: none; padding: 5px; }
-.section-pad { margin: 0 auto; max-width: 1480px; padding-left: 46px; padding-right: 46px; }
-.hero { display: grid; gap: 7vw; grid-template-columns: minmax(300px, .88fr) minmax(370px, 1.12fr); padding-bottom: 102px; padding-top: 88px; }
-.hero-copy { align-self: center; padding-left: 6%; }
-.kicker { color: var(--muted); display: block; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .1em; line-height: 1.5; text-transform: uppercase; }
-h1, h2, h3, p { margin-top: 0; }
-h1 { font-family: 'Instrument Serif', 'Noto Sans SC', serif; font-size: clamp(58px, 7.3vw, 122px); font-weight: 400; letter-spacing: -.02em; line-height: .93; margin: 24px 0 30px; }
-h1 em { color: #d07255; font-style: italic; }
-.hero-intro { color: #b8b4ac; font-size: 16px; line-height: 1.8; max-width: 405px; }
-.text-link, .mini-link { align-items: center; display: inline-flex; gap: 8px; }
-.text-link { border-bottom: 1px solid rgba(237,232,223,.55); font-size: 13px; margin-top: 29px; padding-bottom: 8px; }
-.hero-visual { min-height: 530px; position: relative; }
-.hero-visual img { filter: grayscale(1) sepia(.28) contrast(1.08); height: 100%; object-fit: cover; width: 100%; }
-.hero-caption { bottom: -25px; color: var(--muted); display: flex; font-family: 'DM Mono', monospace; font-size: 9px; justify-content: space-between; left: 0; position: absolute; right: 0; }
-.hero-stamp { border: 1px solid rgba(237,232,223,.45); border-radius: 50%; color: #dad3c6; font-family: 'DM Mono', monospace; font-size: 8px; height: 89px; letter-spacing: .08em; line-height: 1.25; padding-top: 13px; position: absolute; right: -26px; text-align: center; top: -21px; transform: rotate(10deg); width: 89px; }
-.hero-stamp strong { font-size: 24px; font-weight: 400; }
-.question-band { background: #d9d3c8; color: var(--ink); padding-bottom: 92px; padding-top: 77px; }
-.section-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 43px; }
-.section-heading h2 { font-family: 'Instrument Serif', serif; font-size: clamp(38px, 4.2vw, 63px); font-weight: 400; line-height: .95; margin: 13px 0 0; }
-.heading-note { color: #747168; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .05em; text-transform: uppercase; }
-.question-grid { border-top: 1px solid rgba(32,33,31,.28); display: grid; grid-template-columns: repeat(4, 1fr); }
-.question-item { border-right: 1px solid rgba(32,33,31,.28); display: block; min-height: 234px; padding: 22px 28px 20px 0; position: relative; transition: background .2s, padding .2s; }
-.question-item:not(:first-child) { padding-left: 25px; }
-.question-item:last-child { border-right: 0; }
-.question-item:hover { background: rgba(255,255,255,.19); padding-top: 28px; }
-.question-number { color: var(--accent, #c75b3d); display: block; font-family: 'DM Mono', monospace; font-size: 11px; }
-.question-item h3 { font-family: 'Instrument Serif', serif; font-size: 36px; font-weight: 400; margin: 29px 0 12px; }
-.question-item p { color: #626159; font-size: 13px; line-height: 1.65; max-width: 220px; }
-.mini-link { color: var(--ink); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .02em; margin-top: 16px; }
-.timeline-band { padding-bottom: 103px; padding-top: 100px; }
-.timeline { border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, 1fr); }
-.timeline-entry { display: grid; grid-template-columns: auto 26px 1fr; min-height: 274px; padding: 23px 23px 0 0; transition: opacity .2s; }
-.timeline-entry:not(:first-child) { border-left: 1px solid var(--line); padding-left: 22px; }
-.timeline-entry:hover { opacity: .7; }
-.timeline-year { color: var(--muted); font-family: 'DM Mono', monospace; font-size: 10px; padding-top: 2px; white-space: nowrap; }
-.timeline-line { border-left: 1px solid rgba(237,232,223,.45); margin: -23px 0 0 13px; position: relative; }
-.timeline-dot { border: 3px solid var(--ink); border-radius: 50%; display: block; height: 13px; left: -7px; position: absolute; top: 20px; width: 13px; }
-.timeline-content { padding-left: 13px; }
-.timeline-content h3 { font-family: 'Instrument Serif', serif; font-size: 30px; font-weight: 400; margin: 17px 0 13px; }
-.timeline-content p { color: #aaa79f; font-size: 12px; line-height: 1.7; max-width: 215px; }
-.featured-band { background: #242522; padding-bottom: 115px; padding-top: 84px; }
-.philosopher-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
-.philosopher-card { background: #302f2b; display: grid; grid-template-rows: 230px 1fr; min-height: 440px; transition: transform .25s; }
-.philosopher-card:hover { transform: translateY(-6px); }
-.portrait-placeholder { align-items: end; background: #c4b9a8; display: flex; min-height: 230px; overflow: hidden; padding: 15px; position: relative; }
-.portrait-placeholder::before { color: rgba(32,33,31,.7); content: attr(data-initial); font-family: 'Instrument Serif', serif; font-size: 260px; left: 50%; line-height: .7; position: absolute; top: 40%; transform: translate(-50%, -50%); }
-.portrait-placeholder::after { background: linear-gradient(transparent 50%, rgba(32,33,31,.37)); content: ''; inset: 0; position: absolute; }
-.portrait-placeholder span { color: rgba(32,33,31,.75); font-family: 'DM Mono', monospace; font-size: 9px; position: relative; z-index: 1; }
-.card-body { padding: 19px 21px 23px; }
-.card-meta { color: var(--muted); display: flex; font-family: 'DM Mono', monospace; font-size: 9px; justify-content: space-between; }
-.card-body h3 { font-family: 'Instrument Serif', serif; font-size: 38px; font-weight: 400; margin: 22px 0 9px; }
-.card-body p { color: #aba8a0; font-family: 'Instrument Serif', serif; font-size: 18px; line-height: 1.35; }
-.card-body .mini-link { color: #d4cfc4; }
-.site-footer { border-top: 1px solid var(--line); color: var(--muted); display: flex; font-family: 'DM Mono', monospace; font-size: 9px; justify-content: space-between; letter-spacing: .04em; margin: 0 auto; max-width: 1480px; padding: 21px 46px 27px; }
-.page-main { min-height: calc(100vh - 100px); padding-bottom: 120px; padding-top: 92px; }
-.page-intro { border-bottom: 1px solid var(--line); max-width: 740px; padding-bottom: 51px; }
-.page-intro h1 { font-size: clamp(58px, 8vw, 108px); margin: 22px 0 25px; }
-.page-intro p { color: #aaa79f; font-size: 16px; line-height: 1.8; max-width: 570px; }
-.tradition-list { margin-top: 24px; }
-.tradition-row { align-items: center; border-bottom: 1px solid var(--line); display: grid; gap: 28px; grid-template-columns: 42px 220px 1fr 32px; min-height: 244px; padding: 20px 0; }
-.row-index { color: var(--muted); font-family: 'DM Mono', monospace; font-size: 11px; }
-.row-image { height: 165px; overflow: hidden; }
-.row-image img { filter: grayscale(1) sepia(.25); height: 100%; object-fit: cover; transition: transform .35s; width: 100%; }
-.tradition-row:hover img { transform: scale(1.05); }
-.row-copy h2 { font-family: 'Instrument Serif', serif; font-size: 47px; font-weight: 400; margin: 15px 0 9px; }
-.row-copy p { color: #aaa79f; font-size: 13px; line-height: 1.7; max-width: 540px; }
-.row-copy .mini-link { color: #d4cfc4; }
-.row-arrow { color: #d4cfc4; }
-.search-box { align-items: center; border-bottom: 1px solid var(--line); color: var(--muted); display: flex; gap: 13px; margin: 37px 0 22px; max-width: 410px; padding: 0 0 12px; }
-.search-box input { background: none; border: 0; color: var(--paper); flex: 1; font-size: 13px; outline: 0; }
-.search-box span { font-family: 'DM Mono', monospace; font-size: 10px; }
-.all-philosophers { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.large-question-list { margin-top: 41px; }
-.large-question { align-items: center; border-bottom: 1px solid var(--line); display: grid; gap: 30px; grid-template-columns: 40px minmax(200px, .9fr) 1.4fr 25px; min-height: 155px; padding: 18px 0; transition: padding .2s; }
-.large-question:hover { padding-left: 9px; }
-.large-question h2 { font-family: 'Instrument Serif', serif; font-size: 53px; font-weight: 400; margin: 0; }
-.large-question p { color: #aaa79f; font-size: 13px; line-height: 1.7; margin: 0; max-width: 430px; }
-.large-question > svg { color: var(--accent); }
-.detail-hero { align-items: center; display: grid; gap: 8%; grid-template-columns: 1fr 1fr; padding-bottom: 88px; padding-top: 83px; }
-.detail-hero h1 { font-size: clamp(65px, 8vw, 120px); margin: 23px 0; }
-.detail-hero p { color: #b2aea4; font-size: 16px; line-height: 1.8; max-width: 470px; }
-.detail-hero img { filter: grayscale(1) sepia(.25); height: 420px; object-fit: cover; width: 100%; }
-.detail-section { background: #d9d3c8; color: var(--ink); padding-bottom: 100px; padding-top: 74px; }
-.detail-section .section-heading { border-bottom: 1px solid rgba(32,33,31,.28); padding-bottom: 22px; }
-.detail-section .philosopher-card { background: #302f2b; color: var(--paper); }
-.person-hero { align-items: center; display: grid; gap: 9%; grid-template-columns: 42% 1fr; padding-bottom: 95px; padding-top: 85px; }
-.person-portrait { height: min(550px, 58vw); }
-.person-copy h1 { font-size: clamp(75px, 9vw, 140px); margin: 24px 0; }
-.person-copy > p { color: #b2aea4; font-size: 16px; line-height: 1.8; max-width: 475px; }
-.person-quote { color: #d07255 !important; font-family: 'Instrument Serif', serif; font-size: 30px !important; line-height: 1.25 !important; }
-.tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 27px; }
-.tag-row span { border: 1px solid var(--line); color: var(--muted); font-family: 'DM Mono', monospace; font-size: 10px; padding: 7px 10px; }
-.reading-note { background: #d9d3c8; color: var(--ink); padding-bottom: 100px; padding-top: 73px; }
-.reading-note h2 { font-family: 'Instrument Serif', serif; font-size: clamp(43px, 5vw, 72px); font-weight: 400; margin: 22px 0 15px; }
-.reading-note p { color: #626159; font-size: 14px; line-height: 1.8; max-width: 490px; }
-.question-detail { min-height: calc(100vh - 100px); padding-bottom: 110px; padding-top: 50px; }
-.back-link { align-items: center; color: var(--muted); display: inline-flex; font-family: 'DM Mono', monospace; font-size: 10px; gap: 5px; }
-.question-detail-head { border-bottom: 1px solid var(--line); margin: 67px auto 0; max-width: 1040px; padding-bottom: 56px; text-align: center; }
-.question-detail-head .question-number { font-size: 12px; }
-.question-detail-head h1 { font-size: clamp(80px, 14vw, 185px); margin: 25px 0 17px; }
-.question-detail-head p { color: #aaa79f; font-size: 16px; line-height: 1.7; margin: auto; max-width: 550px; }
-.question-essay { font-family: 'Instrument Serif', serif; font-size: 23px; line-height: 1.6; margin: 54px auto; max-width: 690px; }
-.question-essay p { margin-bottom: 27px; }
-.question-essay .dropcap:first-letter { color: var(--accent); float: left; font-size: 88px; line-height: .76; padding: 9px 9px 0 0; }
-.question-thinkers { border-top: 1px solid var(--line); margin: 67px auto 0; max-width: 690px; padding-top: 22px; }
-.question-thinkers > div { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 19px; }
-.thinker-chip { align-items: center; border: 1px solid var(--line); display: inline-flex; font-size: 13px; gap: 17px; padding: 10px 13px; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", Georgia, serif;
+  line-height: 1.6;
+}
+button { font: inherit; cursor: pointer; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-@media (max-width: 760px) {
-  .site-header { padding: 17px 20px; }
-  .menu-button { display: block; }
-  .main-nav { align-items: stretch; background: var(--ink); border-bottom: 1px solid var(--line); display: none; flex-direction: column; gap: 0; left: 0; padding: 10px 20px 20px; position: absolute; right: 0; top: 68px; z-index: 10; }
-  .main-nav.is-open { display: flex; }
-  .main-nav a { border-bottom: 1px solid var(--line); font-size: 14px; padding: 15px 0; }
-  .nav-rule { display: none; }
-  .archive-status { padding-top: 17px; }
-  .section-pad { padding-left: 20px; padding-right: 20px; }
-  .hero { display: flex; flex-direction: column; gap: 50px; padding-bottom: 80px; padding-top: 65px; }
-  .hero-copy { padding-left: 0; }
-  h1 { font-size: 63px; }
-  .hero-intro { font-size: 14px; }
-  .hero-visual { min-height: 390px; }
-  .hero-caption { font-size: 8px; }
-  .hero-stamp { right: -8px; }
-  .question-band { padding-bottom: 68px; padding-top: 61px; }
-  .section-heading { align-items: start; flex-direction: column; gap: 16px; margin-bottom: 28px; }
-  .section-heading h2 { font-size: 46px; }
-  .heading-note { display: none; }
-  .question-grid { grid-template-columns: repeat(2, 1fr); }
-  .question-item { border-bottom: 1px solid rgba(32,33,31,.28); min-height: 212px; padding: 19px 16px 18px 0; }
-  .question-item:not(:first-child) { padding-left: 16px; }
-  .question-item:nth-child(2) { border-right: 0; }
-  .question-item h3 { font-size: 31px; margin-top: 22px; }
-  .question-item p { font-size: 12px; }
-  .timeline-band { padding-bottom: 72px; padding-top: 72px; }
-  .timeline { display: block; }
-  .timeline-entry { grid-template-columns: 49px 23px 1fr; min-height: 175px; padding: 20px 0; }
-  .timeline-entry:not(:first-child) { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
-  .timeline-line { margin: -20px 0; }
-  .timeline-content h3 { font-size: 31px; margin-top: 13px; }
-  .featured-band { padding-bottom: 75px; padding-top: 64px; }
-  .philosopher-grid, .all-philosophers { grid-template-columns: 1fr; }
-  .philosopher-card { grid-template-rows: 190px 1fr; min-height: 0; }
-  .portrait-placeholder { min-height: 190px; }
-  .portrait-placeholder::before { font-size: 220px; }
-  .site-footer { align-items: start; flex-direction: column; gap: 9px; padding: 19px 20px 23px; }
-  .page-main { padding-bottom: 76px; padding-top: 65px; }
-  .page-intro { padding-bottom: 38px; }
-  .page-intro h1 { font-size: 63px; }
-  .tradition-row { gap: 15px; grid-template-columns: 27px 100px 1fr 18px; min-height: 175px; }
-  .row-image { height: 115px; }
-  .row-copy h2 { font-size: 29px; margin: 9px 0 6px; }
-  .row-copy p { font-size: 11px; line-height: 1.55; }
-  .row-copy .mini-link { font-size: 9px; margin-top: 10px; }
-  .row-arrow { align-self: start; padding-top: 4px; }
-  .detail-hero { display: flex; flex-direction: column-reverse; gap: 39px; padding-bottom: 72px; padding-top: 62px; }
-  .detail-hero img { height: 300px; }
-  .detail-hero h1 { font-size: 68px; }
-  .detail-section { padding-bottom: 74px; padding-top: 59px; }
-  .person-hero { display: flex; flex-direction: column; gap: 43px; padding-bottom: 72px; padding-top: 59px; }
-  .person-portrait { height: 390px; width: 100%; }
-  .person-copy h1 { font-size: 79px; }
-  .person-quote { font-size: 27px !important; }
-  .reading-note { padding-bottom: 76px; padding-top: 59px; }
-  .question-detail { padding-bottom: 80px; padding-top: 33px; }
-  .question-detail-head { margin-top: 55px; padding-bottom: 42px; }
-  .question-detail-head h1 { font-size: 88px; }
-  .question-detail-head p { font-size: 14px; }
-  .question-essay { font-size: 21px; margin: 40px auto; }
+.boot { display: grid; place-items: center; min-height: 60vh; color: #6b6455; }
+
+/* ---------- 顶栏 ---------- */
+.topbar {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+  padding: 0.9rem 1.4rem; border-bottom: 2px solid var(--ink); background: var(--paper);
+  position: sticky; top: 0; z-index: 10;
+}
+.topbar h1 { font-size: 1.35rem; margin: 0; letter-spacing: 0.08em; }
+.subtitle { font-size: 0.8rem; color: #7a7263; letter-spacing: 0.18em; margin-left: 0.5rem; font-style: italic; }
+.status { display: flex; align-items: center; gap: 0.7rem; }
+.badge { font-size: 0.82rem; padding: 0.15rem 0.6rem; border: 1px solid #b7ac97; border-radius: 999px; background: #fbf8f1; }
+.st-saved { border-color: var(--ok); color: var(--ok); }
+.st-saving { color: var(--accent); }
+.st-offline, .st-conflict, .st-invalid, .st-error { border-color: var(--danger); color: var(--danger); }
+.save-btn { background: var(--ink); color: var(--paper); border: none; padding: 0.4rem 1.1rem; border-radius: 3px; letter-spacing: 0.1em; }
+.save-btn:disabled { opacity: 0.4; cursor: default; }
+
+/* ---------- 横幅 ---------- */
+.banner { padding: 0.55rem 1.4rem; font-size: 0.9rem; border-bottom: 1px solid #d8cfbc; }
+.banner.ok { background: #e8f0e4; color: var(--ok); }
+.banner.warn { background: #f6ecd4; color: #7a5a1c; }
+.banner.err { background: #f6e2de; color: var(--danger); }
+.banner.note { background: #eef0e4; color: #4c5a2c; }
+.banner.err ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+.banner.err li button { background: none; border: none; color: var(--danger); text-decoration: underline; padding: 0; }
+.banner.err > button { margin-right: 0.6rem; margin-top: 0.3rem; border: 1px solid var(--danger); background: #fff; color: var(--danger); padding: 0.25rem 0.8rem; border-radius: 3px; }
+
+/* ---------- 三栏布局 ---------- */
+.layout { display: grid; grid-template-columns: 240px 1fr 320px; gap: 0; min-height: calc(100vh - 60px); }
+.layout.narrow { grid-template-columns: 1fr; }
+
+/* ---------- 目录 ---------- */
+.palette { border-right: 1px solid #d8cfbc; padding: 1rem; overflow-y: auto; max-height: calc(100vh - 60px); position: sticky; top: 60px; }
+.palette h2 { font-size: 1rem; margin: 0 0 0.2rem; letter-spacing: 0.15em; }
+.palette h3 { font-size: 0.85rem; color: #7a7263; margin: 1.1rem 0 0.4rem; letter-spacing: 0.2em; }
+.palette ul { list-style: none; margin: 0; padding: 0; }
+.hint { font-size: 0.78rem; color: #8a8172; margin: 0; }
+.palette-item {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.4rem;
+  padding: 0.35rem 0.5rem; margin-bottom: 0.3rem; background: #fbf8f1;
+  border: 1px solid #d8cfbc; border-left: 3px solid var(--accent); border-radius: 2px;
+  font-size: 0.85rem; cursor: grab;
+}
+.palette-item.kind-era { border-left-color: var(--era); }
+.palette-item.kind-philosopher { border-left-color: var(--philosopher); }
+.palette-item.kind-question { border-left-color: var(--question); }
+.palette-item.used { opacity: 0.45; cursor: default; }
+.palette-item button { border: 1px solid #b7ac97; background: none; border-radius: 2px; font-size: 0.75rem; padding: 0.1rem 0.5rem; flex: none; }
+
+/* ---------- 展墙 ---------- */
+.stage { padding: 1rem 1.2rem; overflow-x: auto; }
+.wall { background: var(--wall); border: 1px solid #d8cfbc; box-shadow: inset 0 0 60px rgba(90, 75, 50, 0.12); padding: 0.5rem; min-width: 900px; }
+.wall svg { display: block; width: 100%; height: auto; }
+.tick line { stroke: #d3c9b4; stroke-width: 1; stroke-dasharray: 2 4; }
+.tick text { font-size: 11px; fill: #8a8172; text-anchor: middle; }
+.axis { stroke: #8a8172; stroke-width: 1.5; }
+.era-band { fill: rgba(49, 67, 92, 0.10); stroke: var(--era); stroke-width: 1; }
+.era-label { font-size: 12px; fill: var(--era); text-anchor: middle; letter-spacing: 0.2em; }
+.link { fill: none; stroke: #a89a80; stroke-width: 1; stroke-dasharray: 3 3; }
+.drag-guide line { stroke: var(--accent); stroke-width: 1.5; }
+.drag-guide text { font-size: 12px; fill: var(--accent); text-anchor: middle; }
+
+.frame { cursor: grab; outline: none; }
+.frame rect { fill: #fbf8f1; stroke: var(--frame); stroke-width: 1.4; filter: drop-shadow(0 2px 2px rgba(40, 30, 15, 0.25)); }
+.frame.kind-philosopher rect { stroke: var(--philosopher); }
+.frame.kind-question rect { stroke: var(--question); stroke-dasharray: 4 2; }
+.frame.selected rect { stroke-width: 3; }
+.frame.invalid rect { stroke: var(--danger); stroke-width: 3; }
+.frame.dragging { cursor: grabbing; opacity: 0.85; }
+.frame:focus-visible rect { stroke: var(--accent); stroke-width: 3; }
+.frame-title { font-size: 13px; text-anchor: middle; fill: var(--ink); pointer-events: none; }
+.frame-year { font-size: 10px; text-anchor: middle; fill: #8a8172; pointer-events: none; }
+.empty-hint { color: #8a8172; font-size: 0.9rem; padding: 0.6rem; }
+
+/* ---------- 移动端长卷 ---------- */
+.scroll { list-style: none; margin: 0; padding: 0 0 0 1.4rem; border-left: 2px solid #b7ac97; }
+.scroll-item { position: relative; margin-bottom: 0.8rem; background: #fbf8f1; border: 1px solid #d8cfbc; border-radius: 3px; padding: 0.5rem 0.7rem; }
+.scroll-item::before { content: ''; position: absolute; left: -1.4rem; top: 1.1rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); transform: translateX(-50%); }
+.scroll-item.kind-era::before { background: var(--era); }
+.scroll-item.kind-philosopher::before { background: var(--philosopher); }
+.scroll-item.kind-question::before { background: var(--question); }
+.scroll-item.selected { border-color: var(--ink); border-width: 2px; }
+.scroll-item.invalid { border-color: var(--danger); border-width: 2px; }
+.scroll-main { background: none; border: none; padding: 0; display: flex; gap: 0.7rem; align-items: baseline; width: 100%; text-align: left; }
+.scroll-year { font-variant-numeric: tabular-nums; color: var(--accent); font-size: 0.85rem; flex: none; min-width: 3.5em; }
+.scroll-actions { float: right; display: flex; gap: 0.3rem; }
+.scroll-actions button { border: 1px solid #b7ac97; background: #fff; border-radius: 3px; padding: 0.1rem 0.5rem; font-size: 0.8rem; }
+
+/* ---------- 检查器 ---------- */
+.inspector { margin-top: 0.8rem; border: 1px solid #d8cfbc; background: #fbf8f1; padding: 0.8rem 1rem; display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+.inspector h3 { margin: 0; font-size: 1rem; }
+.inspector label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
+.inspector select { font: inherit; padding: 0.2rem 0.4rem; }
+.inspector-actions { margin-left: auto; display: flex; gap: 0.5rem; }
+.inspector .danger { border: 1px solid var(--danger); color: var(--danger); background: none; padding: 0.25rem 0.8rem; border-radius: 3px; }
+.inspector button:not(.danger) { border: 1px solid #b7ac97; background: #fff; padding: 0.25rem 0.8rem; border-radius: 3px; }
+
+/* ---------- 预览 ---------- */
+.preview { border-left: 1px solid #d8cfbc; padding: 1rem 1.2rem; overflow-y: auto; max-height: calc(100vh - 60px); position: sticky; top: 60px; background: #faf7ef; }
+.preview h2 { font-size: 1rem; margin: 0 0 0.6rem; letter-spacing: 0.15em; }
+.preview-src { font-size: 0.7rem; color: var(--ok); border: 1px solid var(--ok); border-radius: 999px; padding: 0 0.5rem; vertical-align: middle; }
+.preview-src.warn { color: #7a5a1c; border-color: #7a5a1c; }
+.preview-note { font-size: 0.8rem; color: #8a8172; }
+.preview h3 { font-size: 0.95rem; border-bottom: 1px solid #d8cfbc; padding-bottom: 0.2rem; margin: 1.2rem 0 0.6rem; }
+.label-card { background: #fff; border: 1px solid #e0d8c6; border-left: 3px solid var(--accent); padding: 0.5rem 0.7rem; margin-bottom: 0.5rem; }
+.label-card h4 { margin: 0; font-size: 0.9rem; }
+.label-card p { margin: 0.2rem 0 0; font-size: 0.82rem; color: #5c5546; }
+.preview-raw { font-size: 0.7rem; overflow: auto; max-height: 40vh; background: #f0ebdd; padding: 0.5rem; }
+
+/* ---------- 窄屏 ---------- */
+@media (max-width: 880px) {
+  .topbar { flex-wrap: wrap; }
+  .palette { position: static; max-height: none; border-right: none; border-bottom: 1px solid #d8cfbc; }
+  .preview { position: static; max-height: none; border-left: none; border-top: 1px solid #d8cfbc; }
+  .stage { padding: 0.8rem; }
 }

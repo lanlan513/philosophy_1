@@ -1,0 +1,1163 @@
+{
+  "timelines": {
+    "demo": {
+      "id": "demo",
+      "version": 5,
+      "nodes": [
+        {
+          "id": "e",
+          "kind": "era",
+          "refId": "c19",
+          "year": 1850,
+          "parentId": null
+        },
+        {
+          "id": "p",
+          "kind": "philosopher",
+          "refId": "russell",
+          "year": 1900,
+          "parentId": "e"
+        },
+        {
+          "id": "q",
+          "kind": "question",
+          "refId": "q-language",
+          "year": 1921,
+          "parentId": "p"
+        },
+        {
+          "id": "z",
+          "kind": "philosopher",
+          "refId": "nietzsche",
+          "year": 1880,
+          "parentId": "e"
+        }
+      ],
+      "updatedAt": "2026-09-18T11:26:43.795Z",
+      "history": [
+        {
+          "version": 0,
+          "nodes": [],
+          "savedAt": "2026-09-18T11:23:34.686Z",
+          "clientId": null
+        },
+        {
+          "version": 1,
+          "nodes": [
+            {
+              "id": "n1",
+              "kind": "era",
+              "refId": "ancient",
+              "year": -500,
+              "parentId": null
+            },
+            {
+              "id": "n2",
+              "kind": "philosopher",
+              "refId": "plato",
+              "year": -400,
+              "parentId": "n1"
+            },
+            {
+              "id": "n3",
+              "kind": "question",
+              "refId": "q-good-life",
+              "year": -390,
+              "parentId": "n2"
+            }
+          ],
+          "savedAt": "2026-09-18T11:24:29.871Z",
+          "clientId": "alice"
+        },
+        {
+          "version": 2,
+          "nodes": [
+            {
+              "id": "e",
+              "kind": "era",
+              "refId": "enlightenment",
+              "year": 1700,
+              "parentId": null
+            },
+            {
+              "id": "p",
+              "kind": "philosopher",
+              "refId": "aquinas",
+              "year": 1250,
+              "parentId": null
+            }
+          ],
+          "savedAt": "2026-09-18T11:25:59.570Z",
+          "clientId": "alice"
+        },
+        {
+          "version": 3,
+          "nodes": [
+            {
+              "id": "e",
+              "kind": "era",
+              "refId": "c19",
+              "year": 1850,
+              "parentId": null
+            },
+            {
+              "id": "p",
+              "kind": "philosopher",
+              "refId": "russell",
+              "year": 1900,
+              "parentId": "e"
+            }
+          ],
+          "savedAt": "2026-09-18T11:26:43.752Z",
+          "clientId": "alice"
+        },
+        {
+          "version": 4,
+          "nodes": [
+            {
+              "id": "e",
+              "kind": "era",
+              "refId": "c19",
+              "year": 1850,
+              "parentId": null
+            },
+            {
+              "id": "p",
+              "kind": "philosopher",
+              "refId": "russell",
+              "year": 1900,
+              "parentId": "e"
+            },
+            {
+              "id": "q",
+              "kind": "question",
+              "refId": "q-language",
+              "year": 1921,
+              "parentId": "p"
+            }
+          ],
+          "savedAt": "2026-09-18T11:26:43.771Z",
+          "clientId": "bob"
+        }
+      ],
+      "idempotency": {
+        "k1": {
+          "status": 200,
+          "body": {
+            "version": 1,
+            "nodes": [
+              {
+                "id": "n1",
+                "kind": "era",
+                "refId": "ancient",
+                "year": -500,
+                "parentId": null
+              },
+              {
+                "id": "n2",
+                "kind": "philosopher",
+                "refId": "plato",
+                "year": -400,
+                "parentId": "n1"
+              },
+              {
+                "id": "n3",
+                "kind": "question",
+                "refId": "q-good-life",
+                "year": -390,
+                "parentId": "n2"
+              }
+            ],
+            "updatedAt": "2026-09-18T11:24:29.871Z"
+          }
+        },
+        "k5": {
+          "status": 200,
+          "body": {
+            "version": 2,
+            "nodes": [
+              {
+                "id": "e",
+                "kind": "era",
+                "refId": "enlightenment",
+                "year": 1700,
+                "parentId": null
+              },
+              {
+                "id": "p",
+                "kind": "philosopher",
+                "refId": "aquinas",
+                "year": 1250,
+                "parentId": null
+              }
+            ],
+            "updatedAt": "2026-09-18T11:25:59.570Z"
+          }
+        },
+        "k7": {
+          "status": 200,
+          "body": {
+            "version": 3,
+            "nodes": [
+              {
+                "id": "e",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1850,
+                "parentId": null
+              },
+              {
+                "id": "p",
+                "kind": "philosopher",
+                "refId": "russell",
+                "year": 1900,
+                "parentId": "e"
+              }
+            ],
+            "updatedAt": "2026-09-18T11:26:43.752Z"
+          }
+        },
+        "b1": {
+          "status": 200,
+          "body": {
+            "version": 4,
+            "nodes": [
+              {
+                "id": "e",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1850,
+                "parentId": null
+              },
+              {
+                "id": "p",
+                "kind": "philosopher",
+                "refId": "russell",
+                "year": 1900,
+                "parentId": "e"
+              },
+              {
+                "id": "q",
+                "kind": "question",
+                "refId": "q-language",
+                "year": 1921,
+                "parentId": "p"
+              }
+            ],
+            "updatedAt": "2026-09-18T11:26:43.771Z"
+          }
+        },
+        "a9": {
+          "status": 200,
+          "body": {
+            "version": 5,
+            "nodes": [
+              {
+                "id": "e",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1850,
+                "parentId": null
+              },
+              {
+                "id": "p",
+                "kind": "philosopher",
+                "refId": "russell",
+                "year": 1900,
+                "parentId": "e"
+              },
+              {
+                "id": "q",
+                "kind": "question",
+                "refId": "q-language",
+                "year": 1921,
+                "parentId": "p"
+              },
+              {
+                "id": "z",
+                "kind": "philosopher",
+                "refId": "nietzsche",
+                "year": 1880,
+                "parentId": "e"
+              }
+            ],
+            "updatedAt": "2026-09-18T11:26:43.795Z",
+            "merged": {
+              "conflicts": [],
+              "fromVersion": 3,
+              "toVersion": 4
+            }
+          }
+        }
+      },
+      "lastClientId": "alice"
+    },
+    "test-1789733621821": {
+      "id": "test-1789733621821",
+      "version": 0,
+      "nodes": [],
+      "updatedAt": "2026-09-18T12:13:41.867Z",
+      "history": [],
+      "idempotency": {}
+    },
+    "dbg1": {
+      "id": "dbg1",
+      "version": 1,
+      "nodes": [
+        {
+          "id": "e1",
+          "kind": "era",
+          "refId": "c19",
+          "year": 1850,
+          "parentId": null
+        },
+        {
+          "id": "p1",
+          "kind": "philosopher",
+          "refId": "nietzsche",
+          "year": 1880,
+          "parentId": "e1"
+        }
+      ],
+      "updatedAt": "2026-09-18T12:14:09.873Z",
+      "history": [
+        {
+          "version": 0,
+          "nodes": [],
+          "savedAt": "2026-09-18T12:14:09.871Z",
+          "clientId": null
+        }
+      ],
+      "idempotency": {
+        "d1": {
+          "status": 200,
+          "body": {
+            "version": 1,
+            "nodes": [
+              {
+                "id": "e1",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1850,
+                "parentId": null
+              },
+              {
+                "id": "p1",
+                "kind": "philosopher",
+                "refId": "nietzsche",
+                "year": 1880,
+                "parentId": "e1"
+              }
+            ],
+            "updatedAt": "2026-09-18T12:14:09.873Z"
+          }
+        }
+      },
+      "lastClientId": "a"
+    },
+    "test-1789733684593": {
+      "id": "test-1789733684593",
+      "version": 6,
+      "nodes": [
+        {
+          "id": "e3",
+          "kind": "era",
+          "refId": "c19",
+          "year": 1840,
+          "parentId": null
+        },
+        {
+          "id": "p10",
+          "kind": "philosopher",
+          "refId": "russell",
+          "year": 1890,
+          "parentId": "e3"
+        },
+        {
+          "id": "n1",
+          "kind": "philosopher",
+          "refId": "nietzsche",
+          "year": 1870,
+          "parentId": "e3"
+        }
+      ],
+      "updatedAt": "2026-09-18T12:14:44.672Z",
+      "history": [
+        {
+          "version": 0,
+          "nodes": [],
+          "savedAt": "2026-09-18T12:14:44.631Z",
+          "clientId": null
+        },
+        {
+          "version": 1,
+          "nodes": [
+            {
+              "id": "e1",
+              "kind": "era",
+              "refId": "c19",
+              "year": 1850,
+              "parentId": null
+            },
+            {
+              "id": "p1",
+              "kind": "philosopher",
+              "refId": "nietzsche",
+              "year": 1880,
+              "parentId": "e1"
+            },
+            {
+              "id": "p2",
+              "kind": "philosopher",
+              "refId": "marx",
+              "year": 1880,
+              "parentId": "e1"
+            },
+            {
+              "id": "p3",
+              "kind": "philosopher",
+              "refId": "schopenhauer",
+              "year": 1855,
+              "parentId": null
+            }
+          ],
+          "savedAt": "2026-09-18T12:14:44.634Z",
+          "clientId": "a"
+        },
+        {
+          "version": 2,
+          "nodes": [
+            {
+              "id": "e3",
+              "kind": "era",
+              "refId": "c19",
+              "year": 1850,
+              "parentId": null
+            },
+            {
+              "id": "p10",
+              "kind": "philosopher",
+              "refId": "russell",
+              "year": 1890,
+              "parentId": "e3"
+            }
+          ],
+          "savedAt": "2026-09-18T12:14:44.654Z",
+          "clientId": "a"
+        },
+        {
+          "version": 3,
+          "nodes": [
+            {
+              "id": "e3",
+              "kind": "era",
+              "refId": "c19",
+              "year": 1850,
+              "parentId": null
+            },
+            {
+              "id": "p10",
+              "kind": "philosopher",
+              "refId": "russell",
+              "year": 1890,
+              "parentId": "e3"
+            },
+            {
+              "id": "q1",
+              "kind": "question",
+              "refId": "q-language",
+              "year": 1895,
+              "parentId": "p10"
+            }
+          ],
+          "savedAt": "2026-09-18T12:14:44.661Z",
+          "clientId": "b"
+        },
+        {
+          "version": 4,
+          "nodes": [
+            {
+              "id": "e3",
+              "kind": "era",
+              "refId": "c19",
+              "year": 1840,
+              "parentId": null
+            },
+            {
+              "id": "p10",
+              "kind": "philosopher",
+              "refId": "russell",
+              "year": 1890,
+              "parentId": "e3"
+            },
+            {
+              "id": "q1",
+              "kind": "question",
+              "refId": "q-language",
+              "year": 1895,
+              "parentId": "p10"
+            },
+            {
+              "id": "n1",
+              "kind": "philosopher",
+              "refId": "nietzsche",
+              "year": 1880,
+              "parentId": "e3"
+            }
+          ],
+          "savedAt": "2026-09-18T12:14:44.665Z",
+          "clientId": "a"
+        },
+        {
+          "version": 5,
+          "nodes": [
+            {
+              "id": "e3",
+              "kind": "era",
+              "refId": "c19",
+              "year": 1840,
+              "parentId": null
+            },
+            {
+              "id": "p10",
+              "kind": "philosopher",
+              "refId": "russell",
+              "year": 1890,
+              "parentId": "e3"
+            },
+            {
+              "id": "q1",
+              "kind": "question",
+              "refId": "q-language",
+              "year": 1895,
+              "parentId": "p10"
+            },
+            {
+              "id": "n1",
+              "kind": "philosopher",
+              "refId": "nietzsche",
+              "year": 1885,
+              "parentId": "e3"
+            }
+          ],
+          "savedAt": "2026-09-18T12:14:44.669Z",
+          "clientId": "b"
+        }
+      ],
+      "idempotency": {
+        "t1": {
+          "status": 200,
+          "body": {
+            "version": 1,
+            "nodes": [
+              {
+                "id": "e1",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1850,
+                "parentId": null
+              },
+              {
+                "id": "p1",
+                "kind": "philosopher",
+                "refId": "nietzsche",
+                "year": 1880,
+                "parentId": "e1"
+              },
+              {
+                "id": "p2",
+                "kind": "philosopher",
+                "refId": "marx",
+                "year": 1880,
+                "parentId": "e1"
+              },
+              {
+                "id": "p3",
+                "kind": "philosopher",
+                "refId": "schopenhauer",
+                "year": 1855,
+                "parentId": null
+              }
+            ],
+            "updatedAt": "2026-09-18T12:14:44.634Z"
+          }
+        },
+        "t5": {
+          "status": 200,
+          "body": {
+            "version": 2,
+            "nodes": [
+              {
+                "id": "e3",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1850,
+                "parentId": null
+              },
+              {
+                "id": "p10",
+                "kind": "philosopher",
+                "refId": "russell",
+                "year": 1890,
+                "parentId": "e3"
+              }
+            ],
+            "updatedAt": "2026-09-18T12:14:44.654Z"
+          }
+        },
+        "t9": {
+          "status": 200,
+          "body": {
+            "version": 3,
+            "nodes": [
+              {
+                "id": "e3",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1850,
+                "parentId": null
+              },
+              {
+                "id": "p10",
+                "kind": "philosopher",
+                "refId": "russell",
+                "year": 1890,
+                "parentId": "e3"
+              },
+              {
+                "id": "q1",
+                "kind": "question",
+                "refId": "q-language",
+                "year": 1895,
+                "parentId": "p10"
+              }
+            ],
+            "updatedAt": "2026-09-18T12:14:44.661Z"
+          }
+        },
+        "t10": {
+          "status": 200,
+          "body": {
+            "version": 4,
+            "nodes": [
+              {
+                "id": "e3",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1840,
+                "parentId": null
+              },
+              {
+                "id": "p10",
+                "kind": "philosopher",
+                "refId": "russell",
+                "year": 1890,
+                "parentId": "e3"
+              },
+              {
+                "id": "q1",
+                "kind": "question",
+                "refId": "q-language",
+                "year": 1895,
+                "parentId": "p10"
+              },
+              {
+                "id": "n1",
+                "kind": "philosopher",
+                "refId": "nietzsche",
+                "year": 1880,
+                "parentId": "e3"
+              }
+            ],
+            "updatedAt": "2026-09-18T12:14:44.665Z",
+            "merged": {
+              "conflicts": [],
+              "fromVersion": 2,
+              "toVersion": 3
+            }
+          }
+        },
+        "t11": {
+          "status": 200,
+          "body": {
+            "version": 5,
+            "nodes": [
+              {
+                "id": "e3",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1840,
+                "parentId": null
+              },
+              {
+                "id": "p10",
+                "kind": "philosopher",
+                "refId": "russell",
+                "year": 1890,
+                "parentId": "e3"
+              },
+              {
+                "id": "q1",
+                "kind": "question",
+                "refId": "q-language",
+                "year": 1895,
+                "parentId": "p10"
+              },
+              {
+                "id": "n1",
+                "kind": "philosopher",
+                "refId": "nietzsche",
+                "year": 1885,
+                "parentId": "e3"
+              }
+            ],
+            "updatedAt": "2026-09-18T12:14:44.669Z"
+          }
+        },
+        "t12": {
+          "status": 200,
+          "body": {
+            "version": 6,
+            "nodes": [
+              {
+                "id": "e3",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1840,
+                "parentId": null
+              },
+              {
+                "id": "p10",
+                "kind": "philosopher",
+                "refId": "russell",
+                "year": 1890,
+                "parentId": "e3"
+              },
+              {
+                "id": "n1",
+                "kind": "philosopher",
+                "refId": "nietzsche",
+                "year": 1870,
+                "parentId": "e3"
+              }
+            ],
+            "updatedAt": "2026-09-18T12:14:44.672Z",
+            "merged": {
+              "conflicts": [
+                {
+                  "id": "n1",
+                  "resolution": "kept-client"
+                }
+              ],
+              "fromVersion": 4,
+              "toVersion": 5
+            }
+          }
+        }
+      },
+      "lastClientId": "a"
+    },
+    "test-1789734089954": {
+      "id": "test-1789734089954",
+      "version": 6,
+      "nodes": [
+        {
+          "id": "e3",
+          "kind": "era",
+          "refId": "c19",
+          "year": 1840,
+          "parentId": null
+        },
+        {
+          "id": "p10",
+          "kind": "philosopher",
+          "refId": "russell",
+          "year": 1890,
+          "parentId": "e3"
+        },
+        {
+          "id": "n1",
+          "kind": "philosopher",
+          "refId": "nietzsche",
+          "year": 1870,
+          "parentId": "e3"
+        }
+      ],
+      "updatedAt": "2026-09-18T12:21:30.044Z",
+      "history": [
+        {
+          "version": 0,
+          "nodes": [],
+          "savedAt": "2026-09-18T12:21:30.007Z",
+          "clientId": null
+        },
+        {
+          "version": 1,
+          "nodes": [
+            {
+              "id": "e1",
+              "kind": "era",
+              "refId": "c19",
+              "year": 1850,
+              "parentId": null
+            },
+            {
+              "id": "p1",
+              "kind": "philosopher",
+              "refId": "nietzsche",
+              "year": 1880,
+              "parentId": "e1"
+            },
+            {
+              "id": "p2",
+              "kind": "philosopher",
+              "refId": "marx",
+              "year": 1880,
+              "parentId": "e1"
+            },
+            {
+              "id": "p3",
+              "kind": "philosopher",
+              "refId": "schopenhauer",
+              "year": 1855,
+              "parentId": null
+            }
+          ],
+          "savedAt": "2026-09-18T12:21:30.009Z",
+          "clientId": "a"
+        },
+        {
+          "version": 2,
+          "nodes": [
+            {
+              "id": "e3",
+              "kind": "era",
+              "refId": "c19",
+              "year": 1850,
+              "parentId": null
+            },
+            {
+              "id": "p10",
+              "kind": "philosopher",
+              "refId": "russell",
+              "year": 1890,
+              "parentId": "e3"
+            }
+          ],
+          "savedAt": "2026-09-18T12:21:30.027Z",
+          "clientId": "a"
+        },
+        {
+          "version": 3,
+          "nodes": [
+            {
+              "id": "e3",
+              "kind": "era",
+              "refId": "c19",
+              "year": 1850,
+              "parentId": null
+            },
+            {
+              "id": "p10",
+              "kind": "philosopher",
+              "refId": "russell",
+              "year": 1890,
+              "parentId": "e3"
+            },
+            {
+              "id": "q1",
+              "kind": "question",
+              "refId": "q-language",
+              "year": 1895,
+              "parentId": "p10"
+            }
+          ],
+          "savedAt": "2026-09-18T12:21:30.034Z",
+          "clientId": "b"
+        },
+        {
+          "version": 4,
+          "nodes": [
+            {
+              "id": "e3",
+              "kind": "era",
+              "refId": "c19",
+              "year": 1840,
+              "parentId": null
+            },
+            {
+              "id": "p10",
+              "kind": "philosopher",
+              "refId": "russell",
+              "year": 1890,
+              "parentId": "e3"
+            },
+            {
+              "id": "q1",
+              "kind": "question",
+              "refId": "q-language",
+              "year": 1895,
+              "parentId": "p10"
+            },
+            {
+              "id": "n1",
+              "kind": "philosopher",
+              "refId": "nietzsche",
+              "year": 1880,
+              "parentId": "e3"
+            }
+          ],
+          "savedAt": "2026-09-18T12:21:30.038Z",
+          "clientId": "a"
+        },
+        {
+          "version": 5,
+          "nodes": [
+            {
+              "id": "e3",
+              "kind": "era",
+              "refId": "c19",
+              "year": 1840,
+              "parentId": null
+            },
+            {
+              "id": "p10",
+              "kind": "philosopher",
+              "refId": "russell",
+              "year": 1890,
+              "parentId": "e3"
+            },
+            {
+              "id": "q1",
+              "kind": "question",
+              "refId": "q-language",
+              "year": 1895,
+              "parentId": "p10"
+            },
+            {
+              "id": "n1",
+              "kind": "philosopher",
+              "refId": "nietzsche",
+              "year": 1885,
+              "parentId": "e3"
+            }
+          ],
+          "savedAt": "2026-09-18T12:21:30.041Z",
+          "clientId": "b"
+        }
+      ],
+      "idempotency": {
+        "t1": {
+          "status": 200,
+          "body": {
+            "version": 1,
+            "nodes": [
+              {
+                "id": "e1",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1850,
+                "parentId": null
+              },
+              {
+                "id": "p1",
+                "kind": "philosopher",
+                "refId": "nietzsche",
+                "year": 1880,
+                "parentId": "e1"
+              },
+              {
+                "id": "p2",
+                "kind": "philosopher",
+                "refId": "marx",
+                "year": 1880,
+                "parentId": "e1"
+              },
+              {
+                "id": "p3",
+                "kind": "philosopher",
+                "refId": "schopenhauer",
+                "year": 1855,
+                "parentId": null
+              }
+            ],
+            "updatedAt": "2026-09-18T12:21:30.009Z"
+          }
+        },
+        "t5": {
+          "status": 200,
+          "body": {
+            "version": 2,
+            "nodes": [
+              {
+                "id": "e3",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1850,
+                "parentId": null
+              },
+              {
+                "id": "p10",
+                "kind": "philosopher",
+                "refId": "russell",
+                "year": 1890,
+                "parentId": "e3"
+              }
+            ],
+            "updatedAt": "2026-09-18T12:21:30.027Z"
+          }
+        },
+        "t9": {
+          "status": 200,
+          "body": {
+            "version": 3,
+            "nodes": [
+              {
+                "id": "e3",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1850,
+                "parentId": null
+              },
+              {
+                "id": "p10",
+                "kind": "philosopher",
+                "refId": "russell",
+                "year": 1890,
+                "parentId": "e3"
+              },
+              {
+                "id": "q1",
+                "kind": "question",
+                "refId": "q-language",
+                "year": 1895,
+                "parentId": "p10"
+              }
+            ],
+            "updatedAt": "2026-09-18T12:21:30.034Z"
+          }
+        },
+        "t10": {
+          "status": 200,
+          "body": {
+            "version": 4,
+            "nodes": [
+              {
+                "id": "e3",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1840,
+                "parentId": null
+              },
+              {
+                "id": "p10",
+                "kind": "philosopher",
+                "refId": "russell",
+                "year": 1890,
+                "parentId": "e3"
+              },
+              {
+                "id": "q1",
+                "kind": "question",
+                "refId": "q-language",
+                "year": 1895,
+                "parentId": "p10"
+              },
+              {
+                "id": "n1",
+                "kind": "philosopher",
+                "refId": "nietzsche",
+                "year": 1880,
+                "parentId": "e3"
+              }
+            ],
+            "updatedAt": "2026-09-18T12:21:30.038Z",
+            "merged": {
+              "conflicts": [],
+              "fromVersion": 2,
+              "toVersion": 3
+            }
+          }
+        },
+        "t11": {
+          "status": 200,
+          "body": {
+            "version": 5,
+            "nodes": [
+              {
+                "id": "e3",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1840,
+                "parentId": null
+              },
+              {
+                "id": "p10",
+                "kind": "philosopher",
+                "refId": "russell",
+                "year": 1890,
+                "parentId": "e3"
+              },
+              {
+                "id": "q1",
+                "kind": "question",
+                "refId": "q-language",
+                "year": 1895,
+                "parentId": "p10"
+              },
+              {
+                "id": "n1",
+                "kind": "philosopher",
+                "refId": "nietzsche",
+                "year": 1885,
+                "parentId": "e3"
+              }
+            ],
+            "updatedAt": "2026-09-18T12:21:30.041Z"
+          }
+        },
+        "t12": {
+          "status": 200,
+          "body": {
+            "version": 6,
+            "nodes": [
+              {
+                "id": "e3",
+                "kind": "era",
+                "refId": "c19",
+                "year": 1840,
+                "parentId": null
+              },
+              {
+                "id": "p10",
+                "kind": "philosopher",
+                "refId": "russell",
+                "year": 1890,
+                "parentId": "e3"
+              },
+              {
+                "id": "n1",
+                "kind": "philosopher",
+                "refId": "nietzsche",
+                "year": 1870,
+                "parentId": "e3"
+              }
+            ],
+            "updatedAt": "2026-09-18T12:21:30.044Z",
+            "merged": {
+              "conflicts": [
+                {
+                  "id": "n1",
+                  "resolution": "kept-client"
+                }
+              ],
+              "fromVersion": 4,
+              "toVersion": 5
+            }
+          }
+        }
+      },
+      "lastClientId": "a"
+    }
+  }
+}

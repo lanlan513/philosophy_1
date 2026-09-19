@@ -1,12 +1,14 @@
 {
-  "name": "the-philosophy-archive",
+  "name": "a-personal-century",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "server": "node server/server.mjs",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node server/test.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
